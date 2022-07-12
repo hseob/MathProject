@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href = "./css/room.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li style="border-top: 0px;"><a href="/add_room">방생성</a></li>
+            <li><a href="/roomList">방목록</a></li>
+            <li><a href="/report">신고</a></li>
+            <li><a id="logout">로그아웃</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div id="section_roomList" class="section_roomList">
+            <div class="roomListContainer">
+                <div class="title">
+                    <h1>참여 가능 통화방 목록</h1>
+                    <p id="roomCounter">방: 1개</p>
+                </div>
+                <div class="roomContainer" id="roomContainer">
+                    <!-- <div class="room">
+                        <h2>수학문제 풀이</h2>
+                        <p>분류: 수학1</p>
+                        <p>호스트: 9999</p>
+                        <p>비고: 14시까지 받습니다</p>
+                        <button>참여</button>
+                    </div> -->
+                </div>
+            </div>
+            <div class="whiteSpace">
+            </div>
+        </div>
+    </section>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/menu_logout.js"></script>
+    <script src="./js/roomList.js"></script>
+
+</body>
+</html>

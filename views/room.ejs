@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href = "./css/room.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li style="border-top: 0px;"><a href="/add_room">방생성</a></li>
+            <li><a href="/roomList">방목록</a></li>
+            <li><a href="/report">신고</a></li>
+            <li><a id="logout">로그아웃</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div id="section_room" class="section_room">
+            <div class="main_panel">
+                <div class="main_panel_title">
+                    <h1 id="roomName"></h1>
+                    <p id="division"></p>
+                    <p id="host"></p>
+                    <p id="roomNote"></p>
+                </div>
+                <div class="screen_panel">
+                    <h2>상대화면</h2>
+                    <video autoplay controls id="opponentscreen" class="screen"></video>
+                    <p id="student">학생: 입장하지 않음</p>
+                    <div id="myscreenpanel" style="display: none;">
+                        <h2>내화면</h2>
+                        <video autoplay controls id="screen" class="screen" style="width: 300px; height: 200px;"></video>
+                    </div>
+                </div>
+                <div class="btn_panel">
+                    <button id="recommend">추천하기</button>
+                    <button id="screen_change">화면공유</button>
+                    <button id="screen_off">화공끄기</button>
+                    <button id="mute">마이크켜짐</button>
+                    <button id="exit">나가기</button>
+                </div>
+            </div>
+            <div class="calc_chat_panel">
+                <div class="chat">
+                    <ul id="li_tag">
+                        <li>음성채팅, 마이크가 제대로 동작하지 않으면 마이크 연결을 허용하거나 연결하여 방을 다시 입장해주세요.</li>
+                    </ul>
+                </div>
+                <div class="inputchat">
+                    <textarea id="msg_text"></textarea>
+                    <button id="msg_submit">전송</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 오디오 가려줘야함 바닥 안 늘어남 -->
+    <audio id="audio" style="display: none;" controls autoplay></audio>
+    
+
+</body>
+<script>
+    let roomInfo = "<%= roomInfo %>";
+    let userInfo = "<%= userInfo %>";
+    roomInfo = roomInfo.replaceAll('&#34;', "\"");
+    roomInfo = roomInfo.replaceAll("{\"roomInfo\":\"", "");
+    roomInfo = roomInfo.replaceAll("}\"}", "}");
+    userInfo = userInfo.replaceAll('&#34;', "\"");
+    roomInfo = JSON.parse(roomInfo);
+    userInfo = JSON.parse(userInfo);
+
+</script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="./js/menu_logout.js"></script>
+<script src="./js/room.js"></script>
+</html>

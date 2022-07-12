@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href = "./css/room.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li style="border-top: 0px;"><a href="/add_room">방생성</a></li>
+            <li><a href="/roomList">방목록</a></li>
+            <li><a href="/report">신고</a></li>
+            <li><a id="logout">로그아웃</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div id="section_roomList" class="section_roomList">
+            <div class="roomListContainer">
+                <div class="title">
+                    <h1>신고하기</h1>
+                </div>
+                <div class="addContainer">
+                    <div class="add">
+                        <p id="me">신고자: 나)aaaa</p>
+                        <form id="form" class="form" action="/reported" method="POST">
+                            <input id="who" type="text" name="who" placeholder="유저이름">
+                            
+                            <div class="select">
+                                <p>분류</p>
+                                <select name="division" id="">
+                                    <option value="욕설">욕설</option>
+                                    <option value="다른주제">다른주제</option>
+                                    <option value="기타">기타</option>
+                                </select>
+                            </div>
+                            <textarea name="why" id="why" placeholder="사유를 적어주세요"></textarea>
+                            <!-- <p>증명자료</p>
+                            <input type="file">    -->
+                            <button id="btn">신고</button>                
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="whiteSpace">
+            </div>
+        </div>
+    </section>
+    <script src="./js/menu_logout.js"></script>
+    <script src="./js/report.js"></script>
+
+</body>
+</html>

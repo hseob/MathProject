@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href = "./css/room.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li style="border-top: 0px;"><a href="/add_room">방생성</a></li>
+            <li><a href="/roomList">방목록</a></li>
+            <li><a href="/report">신고</a></li>
+            <li><a id="logout">로그아웃</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="section_roomList">
+            <div class="roomListContainer">
+                <div class="title">
+                    <h1>방생성</h1>
+                </div>
+                <div class="addContainer">
+                    <div class="add">
+                        <p id="me">호스트: 나)aaaa</p>
+                        <form id="form" class="form" action="/room" method="POST">
+                            <input type="hidden" id="host" name="host">
+                            <input type="hidden" id="email" name="email">
+                            <input id="roomName" type="text" name="roomName" placeholder="방이름">
+                            <input id="roomNote" type="text" name="roomNote" placeholder="비고">
+                            <div class="select">
+                                <p>분류</p>
+                                <select name="division" id="">
+                                    <option value="수학(하)">수학(하)</option>
+                                    <option value="수학(상)">수학(상)</option>
+                                    <option value="수학1">수학1</option>
+                                    <option value="수학2">수학2</option>
+                                    <option value="대학수학">대학수학</option>
+                                    <option value="기타">기타</option>
+                                </select>
+                            </div>
+                            <button>생성</button>                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="whiteSpace"></div>
+        </div>
+    </section>
+    <script>
+        let userInfo = "<%= userInfo %>";
+        userInfo = userInfo.replaceAll('&#34;', "\"");
+        userInfo = JSON.parse(userInfo);
+        let userDB = "<%= _userDB %>";
+        userDB = userDB.replaceAll('&#34;', "\"");
+        userDB = JSON.parse(userDB);
+    </script>
+    <script src="./js/menu_logout.js"></script>
+    <script src="./js/add_room.js"></script>
+
+</body>
+</html>

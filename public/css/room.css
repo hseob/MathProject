@@ -1,0 +1,206 @@
+html{
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%
+}
+
+.menu{
+    padding: 0px;
+    margin: 0px;
+    position: fixed;
+    z-index: 1;
+    width: auto;
+    height: 100%;
+    border-right: 1px solid black;
+    background: white;
+}
+
+.menu li{
+    background: white;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-top: 1px solid black;
+}
+
+.menu li:hover{
+    background: gray;
+}
+
+.menu li a{    
+    color: black;
+    line-height: 100px;
+    display: block;
+    text-decoration: none;
+}
+
+section{
+    margin-left: 100px;
+    height: 100%;
+}
+
+/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
+
+.section_roomList{
+    display: flex;
+    /* background: red; */
+    height: 100%;
+}
+
+.roomListContainer{
+    flex: 2;
+    background: white;
+    overflow: hidden;
+    border-right: 1px solid black;
+}
+
+.whiteSpace{
+    flex: 3;
+    /* background: green; */
+}
+
+.title{
+    /* position: absolute; */
+    text-align: center;
+    /* border: 1px solid red; */
+    height: 10%;
+}
+
+.title h1,p{
+    display: block;
+}
+
+.roomContainer{
+    /* background: gray; */
+    height: 90%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.room{
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.room h2,p,button{
+    display: block;
+    margin: 0px;
+}
+
+
+
+
+/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
+
+.section_room{
+    display: flex;
+    height: 100%;
+}
+
+.main_panel{
+    margin: 10px;
+    /* background: red; */
+    flex: 3;
+}
+
+.calc_chat_panel{
+    /* background: blue; */
+    border-left: 1px solid black;
+    flex: 1;
+}
+
+.main_panel_title h1,p{
+    margin: 0px;
+    display: block;
+}
+
+.screen{
+    background: black;
+    width: 100%;
+    height: 500px;
+}
+
+.btn_panel{
+    /* width: 100%; */
+    text-align: center;
+    /* background: green; */
+    margin-top: 50px;
+}
+
+.btn_panel button{
+    display: inline-block;
+}
+
+
+.calc_chat_panel{
+    /* overflow: scroll; */
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.chat{
+    height: 60%;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.chat ul{
+    margin: 0;
+}
+
+.inputchat{
+    width: 100%;
+    height: 20%;
+}
+
+.inputchat textarea{
+    width: 100%;
+    height: 50%;
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+}
+
+.inputchat button{
+    width: 100%;
+    height: 50px;
+}
+
+.addContainer{
+    margin: auto;
+    margin: 20px;
+}
+
+.add p, input, button{
+    margin: 10px;
+    display: block;
+}
+
+.add input{
+    width: 95%;
+}
+
+.select p, select{
+    display: inline-block;
+}
+
+.form button{
+    margin: auto;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+textarea{
+    margin: 10px;
+    width: 95%;
+    height: 100px;
+}
